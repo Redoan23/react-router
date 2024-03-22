@@ -9,6 +9,7 @@ export default function Navbar() {
                 <Link to="/contact">Contact</Link>
                 <Link to="/connections">Connections</Link>
                 <Link to="/header">Header</Link>
+                <Link to="/posts">Posts</Link>
                 <Link to="/user">User</Link>
             </div>
         </div>

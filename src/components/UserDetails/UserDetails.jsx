@@ -16,7 +16,7 @@ export default function Details() {
             <p>phone: {phone}</p>
             <p>{website}</p>
 
-            <button id="btn" style={{ backgroundColor: 'salmon', color: 'white', }} onClick={handleNavigate}>Go Back</button>
+            <button id="btn" style={{ backgroundColor: 'salmon', color: 'white' }} onClick={handleNavigate}>Go Back</button>
         </div>
     )
 }
