@@ -14,11 +14,13 @@ import User from './components/User/User.jsx';
 import Details from './components/UserDetails/UserDetails.jsx';
 import Posts from './components/Posts/Posts.jsx';
 import PostDetails from './components/PostDetail/PostDetails.jsx';
+import Error from './components/Error/Error.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <Error></Error>,
 
     children: [
       {
@@ -39,19 +41,19 @@ const router = createBrowserRouter([
         element: <User></User>
       },
       {
-        path:'/user/:id',
-        loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
-        element:<Details></Details>
+        path: '/user/:id',
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
+        element: <Details></Details>
       },
       {
-        path:'/posts',
-        loader: ()=>fetch("https://jsonplaceholder.typicode.com/posts"),
-        element:<Posts></Posts>
+        path: '/posts',
+        loader: () => fetch("https://jsonplaceholder.typicode.com/posts"),
+        element: <Posts></Posts>
       },
       {
-        path:'/posts/:postId',
-        loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
-        element:<PostDetails></PostDetails>
+        path: '/posts/:postId',
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        element: <PostDetails></PostDetails>
       }
 
     ]

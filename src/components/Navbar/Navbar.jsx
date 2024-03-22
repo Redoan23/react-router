@@ -1,16 +1,17 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import './Navbar.css'
 
 export default function Navbar() {
     return (
         <div>
             <span>Here is the link to the other pages</span>
             <div style={{display:"flex", gap:'10px', justifyContent:'center'}}>
-                <Link to="/">Home</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/connections">Connections</Link>
-                <Link to="/header">Header</Link>
-                <Link to="/posts">Posts</Link>
-                <Link to="/user">User</Link>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/connections">Connections</NavLink>
+                <NavLink to="/header">Header</NavLink>
+                <NavLink to="/posts">Posts</NavLink>
+                <NavLink to="/user">User</NavLink>
             </div>
         </div>
     )
