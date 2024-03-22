@@ -10,7 +10,7 @@ export default function Posts() {
             <h2>There are {posts.length} posts</h2>
             <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)',gap:'5px'}}>
                 {
-                    posts.map(post => <Post post={post}></Post>)
+                    posts.map(post => <Post key={post.id} post={post}></Post>)
                 }
             </div>
         </div>
