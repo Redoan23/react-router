@@ -10,10 +10,10 @@ export default function Post({ post }) {
     }
 
     return (
-        <div style={{ border: '2px solid black', borderRadius: "5px", padding: '5px', backgroundColor: "" }}>
+        <div style={{ border: '2px solid black', borderRadius: "5px", padding: '25px', display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
             <p style={{ fontWeight: "1000" }}>{id}</p>
             <h2 style={{ color: "coral" }}>{title}</h2>
-            <button onClick={handlePost}>See Post</button>
+            <button style={{backgroundColor:'lightcoral'}} onClick={handlePost}>See Post</button>
             
         </div>
     )
